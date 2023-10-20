@@ -16,16 +16,27 @@ int main() {
             while (n % 2 == 0) {
                 if (n != init) printf(" * ");
                 printf("2");
-                n >>= 1; // n = n/2;
+                n >>= 1; // n = n/2
             }
-            unsigned long long val = 3;
+            while (n % 3 == 0) {
+                if (n != init) printf(" * ");
+                printf("3");
+                n /= 3;
+            }
+            while (n % 5 == 0) {
+                if (n != init) printf(" * ");
+                printf("5");
+                n /= 5;
+            }
+            unsigned long long val = 7;
             while (val*val <= n) {
                 while (n % val == 0) {
                     if (n != init) printf(" * ");
                     printf("%llu", val);
                     n /= val;
                 }
-                val += 2; // Skip even numbers
+                if (val % 10 == 3) val += 4;
+                else val += 2; // Skip multiples of 2 & 5
             }
             if (n != 1) {
                 if (n != init) printf(" * ");
