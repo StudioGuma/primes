@@ -10,7 +10,6 @@ Example outputs:
 
 The input is an unsigned long long value, so it works with any integer from 2 to 18446744073709551615 (2^64 - 1), inclusive. Any number above 18446744073709551615 will become 18446744073709551615.
 
-Building requires installing the GCC compiler and, on Windows, Make. To build, open a command line & type `make`. You can then execute by typing `primes` (on Windows) or `./primes` (on Unix-like systems), and clean by typing `make clean`.  
-**NOTE:** If you’re not using Windows, you need to change the `OS` value in the makefile out of `windows`, or cleaning won’t work.
+Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line & type `make`. You can then execute by typing `2adics` (on Windows) or `./2adics` (on Unix-like systems) and clean by typing `make clean` after editing the makefile based on your OS.
 
-File size: 393 KB
+File size: 392 KB
