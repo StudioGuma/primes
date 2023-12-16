@@ -3,7 +3,7 @@
 #include <string.h>
 
 uint64_t uatoll(const char* S) {
-    uint64_t dst = 0;
+    static uint64_t dst = 0;
     for (uint8_t i = 0; i < strlen(S); i++) {
         dst *= 10;
         dst += S[i] - 48;
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
             printf("5");
             n /= 5;
         }
-        uint64_t val = 7;
+        static uint64_t val = 7;
         while (val*val <= n) {
             while (n % val == 0) {
                 if (n != init) printf(" * ");
