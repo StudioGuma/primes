@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     else {
         printf("%" PRIu64 " = ", n);
 
-        while (n % 2 == 0) {
+        while (!(n & 1)) { // While n is divisible by 2
             if (n != init) printf(" * ");
             printf("2");
             n >>= 1; // n = n/2
