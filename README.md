@@ -8,8 +8,8 @@ Example outputs:
 * `4294967295 = 3 * 5 * 17 * 257 * 65537`
 * `614889782588491410 = 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23 * 29 * 31 * 37 * 41 * 43 * 47`
 
-The input is an unsigned long long value, so it works with any integer from 2 to 18446744073709551615 (2^64 - 1), inclusive. Any number above 18446744073709551615 will become 18446744073709551615.
+The input is an unsigned 64-but integer, so it works with any integer from 2 to 18446744073709551615 (2^64 - 1), inclusive. Any number above 18446744073709551615 will become 18446744073709551615.
 
-Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line & type `make`. You can then execute by typing `2adics` (on Windows) or `./2adics` (on Unix-like systems) and clean by typing `make clean` after editing the makefile based on your OS.
+Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line & type `make`. You can then execute by typing `primes <n>` (on Windows) or `./primes <n>` (on Unix-like systems), where `<n>` is the integer input, and clean by typing `make clean` after editing the makefile based on your OS.
 
-File size: 392 KB
+Executable size: 246 KB
