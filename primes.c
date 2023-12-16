@@ -1,13 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <inttypes.h>
+#include <string.h>
+
+uint64_t uatoll(const char* S) {
+    uint64_t dst = 0;
+    for (uint8_t i = 0; i < strlen(S); i++) {
+        dst *= 10;
+        dst += S[i];
+        dst -= 48;
+    }
+    return dst;
+}
 
 int main(int argc, char** argv) {
     if (argc != 2) {
         fprintf(stderr, "Usage: primes <n>\n");
         return 1;
     }
-    uint64_t n = atoll(argv[1]);
+    uint64_t n = uatoll(argv[1]);
     uint64_t init = n; // Store the input value, to know when to put multiplication signs
 
     if (n < 2) {
