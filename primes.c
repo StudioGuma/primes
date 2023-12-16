@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
         fprintf(stderr, "Usage: primes <n>\n");
         return 1;
     }
-    uint64_t n = atoi(argv[1]);
+    uint64_t n = atoll(argv[1]);
     uint64_t init = n; // Store the input value, to know when to put multiplication signs
 
     if (n < 2) {
