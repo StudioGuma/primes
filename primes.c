@@ -4,14 +4,14 @@
 
 int main(int argc, char** argv) {
     if (argc != 2) {
-        fprintf(stderr, "Usage: primes <n>");
+        fprintf(stderr, "Usage: primes <n>\n");
         return 1;
     }
     uint64_t n = atoi(argv[1]);
     uint64_t init = n; // Store the input value, to know when to put multiplication signs
 
     if (n < 2) {
-        fprintf(stderr, "Number must be at least 2");
+        fprintf(stderr, "Number must be at least 2\n");
         return 1;
     }
     else {
@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
             printf("%" PRIu64, n);
         }
     }
-
+    
+    printf("\n");
     return 0;
 }
