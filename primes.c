@@ -6,8 +6,7 @@ uint64_t uatoll(const char* S) {
     uint64_t dst = 0;
     for (uint8_t i = 0; i < strlen(S); i++) {
         dst *= 10;
-        dst += S[i];
-        dst -= 48;
+        dst += S[i] - 48;
     }
     return dst;
 }
