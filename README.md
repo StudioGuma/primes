@@ -12,4 +12,4 @@ The input is an unsigned 64-bit integer, so it works with any integer from 2 to 
 
 Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line & type `make`. You can then execute by typing `primes <n>` (on Windows) or `./primes <n>` (on Unix-like systems), where `<n>` is the integer input, and clean by typing `make clean` after editing the makefile based on your OS.
 
-Executable size: 247 KB
+Executable size: 246 KB
