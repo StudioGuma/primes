@@ -1,4 +1,4 @@
-Command line program written in C that calculates & prints the full prime factorization of a natural number (at least 2) using trial division.
+Command line program written in C that calculates and prints the full prime factorization of a natural number (at least 2) using trial division.
 
 Example outputs:
 * `3 = 3`
@@ -10,6 +10,6 @@ Example outputs:
 
 The input is an unsigned 64-bit integer, so it works with any integer from 2 to 18446744073709551615 (2^64 - 1), inclusive.
 
-Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line & type `make`. You can then execute by typing `primes <n>` (on Windows) or `./primes <n>` (on Unix-like systems), where `<n>` is the integer input, and clean by typing `make clean` after editing the makefile based on your OS.
+Building requires installing a compiler, preferably GCC, and Make on Windows. To build, open a command line and type `make`. You can then execute by typing `primes <n>` (on Windows) or `./primes <n>` (on Unix-like systems), where `<n>` is the integer input, and clean by typing `make clean` after editing the makefile based on your OS.
 
 Executable size: 246 KB
