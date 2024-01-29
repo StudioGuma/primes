@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
                 n /= val;
             }
             if (val % 10 == 3) val += 4;
-            else val += 2; // Skip multiples of 2 & 5
+            else val += 2; // Skip multiples of 2 and 5
         }
         if (n != 1) {
             if (n != INIT) printf(" * ");
