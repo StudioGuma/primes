@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <inttypes.h>
 #include <string.h>
 
-uint64_t uatoll(const char* S) {
+uint64_t uatoll(const char *S) {
     uint64_t dst = 0;
     for (uint8_t i = 0; i < strlen(S); i++) {
         dst *= 10;
@@ -11,17 +12,17 @@ uint64_t uatoll(const char* S) {
     return dst;
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     if (argc != 2) {
         fprintf(stderr, "Usage: primes <n>\n");
-        return 1;
+        exit(EXIT_FAILURE);
     }
     uint64_t n = uatoll(argv[1]);
     const uint64_t INIT = n; // Store the input value, to know when to put multiplication signs
 
     if (n < 2) {
-        fprintf(stderr, "Number must be at least 2\n");
-        return 1;
+        fprintf(stderr, "Error: Number must be at least 2\n");
+        exit(EXIT_FAILURE);
     }
     else {
         printf("%" PRIu64 " = ", n);
@@ -58,5 +59,5 @@ int main(int argc, char** argv) {
     }
     
     printf("\n");
-    return 0;
+    exit(EXIT_SUCCESS);
 }
