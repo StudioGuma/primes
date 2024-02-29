@@ -31,19 +31,19 @@ int main(int argc, char **argv)
 		while (!(n & 1)) { // While n is divisible by 2
 			if (n != INIT)
 				printf(" * ");
-			printf("2");
+			putchar('2');
 			n >>= 1; // n = n/2
 		}
 		while (n % 3 == 0) {
 			if (n != INIT)
 				printf(" * ");
-			printf("3");
+			putchar('3');
 			n /= 3;
 		}
 		while (n % 5 == 0) {
 			if (n != INIT)
 				printf(" * ");
-			printf("5");
+			putchar('5');
 			n /= 5;
 		}
 		uint64_t val = 7;
@@ -66,6 +66,6 @@ int main(int argc, char **argv)
 		}
 	}
 
-	printf("\n");
+	putchar('\n');
 	exit(EXIT_SUCCESS);
 }
