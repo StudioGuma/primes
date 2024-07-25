@@ -13,7 +13,7 @@ Example outputs:
 
 The input is an unsigned 64-bit integer, so it works with any integer from 2 to 18446744073709551615 (2^64 - 1), inclusive.
 
-Building requires a compiler, preferably GCC, as well as MinGW or GNU Make on Windows. Make sure to edit the makefile according to your compiler and OS. To build, open a command line and type `make`. You can then execute by typing `./primes <n>` (on Unix-like systems) or `primes <n>` (on Windows), where `<n>` is the integer input, and clean by typing `make clean`.
+Building requires a compiler, preferably GCC, and Make. Make sure to edit the makefile according to your compiler and OS. To build, open a command line and type `make`. You can then execute by typing `./primes <n>` (on Unix-like systems) or `primes <n>` (on Windows), where `<n>` is the integer input, and clean by typing `make clean`.
 
 Built for 64-bit systems by default, but you can edit the macros to change it to 32-bit.
 
