@@ -17,4 +17,4 @@ Building requires a compiler, preferably GCC, and Make. Make sure to edit the ma
 
 Built for 64-bit systems by default, but you can edit the macros to change it to 32-bit.
 
-Linux executable size: 16.2 kB
+Linux executable size: 15.9 KiB
