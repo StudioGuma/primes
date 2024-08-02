@@ -1,5 +1,5 @@
 /*
-primes: calculates and prints the prime factorization of a natural number
+primes — calculates and prints the prime factorization of a natural number
 Copyright (C) 2024 StudioGuma
 
 This program is free software: you can redistribute it and/or modify
