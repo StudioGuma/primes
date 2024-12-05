@@ -28,6 +28,11 @@ UINT_TYPE uatoll(const char *S)
 {
 	UINT_TYPE dst = 0;
 	for (uint8_t i = 0; i < strlen(S); i++) {
+		if (!('0' <= S[i] && S[i] <= '9')) {
+			fprintf(stderr, "Error: input is not a number\n");
+			exit(EXIT_FAILURE);
+		}
+
 		dst *= 0xa;
 		dst += S[i] - 0x30; // '0' is ASCII character 48
 	}
