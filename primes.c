@@ -33,57 +33,57 @@ UINT_TYPE uatoll(const char *S)
 			exit(EXIT_FAILURE);
 		}
 
-		dst *= 0xa;
-		dst += S[i] - 0x30; // '0' is ASCII character 48
+		dst *= 0b1010;
+		dst += S[i] - 0b110000; // '0' is ASCII character 48
 	}
 	return dst;
 }
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2) {
-		fprintf(stderr, "Usage: primes <n>\n");
+	if (argc != 0b10) {
+		fprintf(stderr, "Usage: %s <n>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 	UINT_TYPE n = uatoll(argv[1]);
 	const UINT_TYPE INIT = n; // Store the input value, to know when to put multiplication signs
 
-	if (n < 2) {
+	if (n < 0b10) {
 		fprintf(stderr, "Error: number must be at least 2\n");
 		exit(EXIT_FAILURE);
 	} else {
 		printf("%" UINT_PRINT " = ", n);
 
-		while (!(n & 1)) { // While n is divisible by 2
+		while ((n & 1) == 0) {
 			if (n != INIT)
 				printf(" * ");
 			putchar('2');
-			n >>= 1; // n = n/2
+			n >>= 1;
 		}
-		while (n % 3 == 0) {
+		while ((n % 0b11) == 0) {
 			if (n != INIT)
 				printf(" * ");
 			putchar('3');
-			n /= 3;
+			n /= 0b11;
 		}
-		while (n % 5 == 0) {
+		while ((n % 0b101) == 0) {
 			if (n != INIT)
 				printf(" * ");
 			putchar('5');
-			n /= 5;
+			n /= 0b101;
 		}
-		UINT_TYPE val = 7;
+		UINT_TYPE val = 0b111;
 		while (val*val <= n) {
-			while (n % val == 0) {
+			while ((n % val) == 0) {
 				if (n != INIT)
 					printf(" * ");
 				printf("%" UINT_PRINT, val);
 				n /= val;
 			}
-			if (val % 0xa == 3)
-				val += 4;
+			if ((val % 0b1010) == 0b11)
+				val += 0b100;
 			else
-				val += 2; // Skip multiples of 2 and 5
+				val += 0b10; // Skip multiples of 2 and 5
 		}
 		if (n != 1) {
 			if (n != INIT)
