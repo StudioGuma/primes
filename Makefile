@@ -4,17 +4,16 @@ TARGET = $(patsubst %.c,%,$(C_FILE))
 
 # DEBUG = true
 
-CFLAGS = -Wall -Werror -Wextra
+CC_FLAGS = -Wall -Werror -Wextra
 ifdef DEBUG
-CFLAGS += -O0 -g
+CC_FLAGS += -O0 -g
 endif
 ifndef DEBUG
-CFLAGS += -O2
+CC_FLAGS += -O2
 endif
 
 all:
-	$(CC) $(CFLAGS) $(C_FILE) -o $(TARGET)
+	$(CC) $(CC_FLAGS) $(C_FILE) -o $(TARGET)
 
 clean:
-#	del /q $(TARGET).exe
 	rm $(TARGET)
